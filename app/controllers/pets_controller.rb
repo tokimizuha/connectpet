@@ -6,6 +6,7 @@ class PetsController < ApplicationController
   end
 
   def new
+    @pet = Pet.new
   end
 
   def edit
