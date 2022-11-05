@@ -97,4 +97,6 @@
   </div>
 </section>
 
-ペット情報は後で実装
+<% @user.pets.each do |pet| %>
+  <%= attachment_image_tag pet, :image %>
+<% end %>
