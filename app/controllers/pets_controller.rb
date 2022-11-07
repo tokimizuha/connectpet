@@ -21,6 +21,9 @@ class PetsController < ApplicationController
 
   def edit
     @pet = Pet.find(params[:id])
+    if @pet.user != current_user
+      redirect_to pets_path, alert: '不正なアクセスです。'
+    end
   end
 
   def update
